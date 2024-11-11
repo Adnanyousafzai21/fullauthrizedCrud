@@ -11,8 +11,7 @@ import { baseUrl } from '@/config/constant'
 
 const Dashboard = () => {
     const route = useRouter()
-    const router = useParams()
-    const { id } = router
+    const { id } = useParams() || {};
 
     const [priveFile, setPriveFile] = useState([])
     // const [temprivfile, settemprivFile]=useState([])
@@ -39,8 +38,10 @@ const Dashboard = () => {
         }
     }
     useEffect(() => {
-        gettodbyid()
-    }, [])
+        if (id) {
+            gettodbyid();
+        }
+    }, [id]);
     const onSubmit = async (formData) => {
         try {
             const res = await fetch(`${baseUrl}/api/todo/todocreate?id=${id}`, {

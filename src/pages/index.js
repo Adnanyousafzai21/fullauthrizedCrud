@@ -7,9 +7,10 @@ export default function Home() {
   const [token, setToken] = useState(null);
 
   useEffect(() => {
-    // Check if token exists in localStorage on the client side
-    const storedToken = localStorage.getItem("token");
-    setToken(storedToken);
+    if (typeof window !== "undefined") {
+      const storedToken = localStorage.getItem("token");
+      setToken(storedToken);
+    }
   }, []);
 
   if (token === null) {

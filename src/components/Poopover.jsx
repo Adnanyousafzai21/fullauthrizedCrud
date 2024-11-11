@@ -1,8 +1,8 @@
 import React from 'react'
 import { MdOutlineDeleteOutline, MdOutlineEdit } from 'react-icons/md'
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { baseUrl } from '../config/constant';
 import Link from 'next/link';
+import { baseUrl } from '@/config/constant';
 
 const PoopOver = ({ getlltodos, item }) => {
 

@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useState } from 'react'
-import Uplaodfile from '../../components/Uplaodfile'
 import { useForm } from 'react-hook-form'
 import { baseUrl } from '../../config/constant'
+import Uplaodfile from '@/components/uplaodfile'
 
 
 const Dashboard = () => {

@@ -4,15 +4,20 @@ import { useRouter } from 'next/navigation';
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { MdOutlineMailOutline } from 'react-icons/md'
-  
+
 import { baseUrl } from '@/config/constant';
 
 
 const ResetPassword = () => {
     const Router = useRouter()
     const { handleSubmit, register, formState: { errors } } = useForm()
-    const email = localStorage.getItem("email")
-
+    const [email, setEmail] = useState(null);
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const storedEmail = localStorage.getItem("email");
+            setEmail(storedEmail);
+        }
+    }, []);
     const onsubmit = async (data) => {
 
         const res = await fetch(`${baseUrl}/api/user/reset-password`, {
@@ -30,7 +35,7 @@ const ResetPassword = () => {
     return (
         <div className="flex justify-between  items-center flex-col md:flex-row md:h-screen">
             <div className="md:w-[50%] flex items-start justify-center">
-                  <img src="/images/9.jpg" alt=""   className='md:w-[80%] sm:w-[60%] w-[300px]' />
+                <img src="/images/9.jpg" alt="" className='md:w-[80%] sm:w-[60%] w-[300px]' />
             </div>
             <div className="md:w-[50%] flex items-start flex-col gap-y-10 justify-center">
                 <h2 className='text-[20px] font-[600] text-[#111111] '> Reset Passsword</h2>

@@ -9,8 +9,13 @@ import { baseUrl } from '@/config/constant';
 const OtpCode = () => {
     const Router = useRouter();
     const { handleSubmit, register, formState: { errors } } = useForm();
-    const email = localStorage.getItem("email")
-    console.log("email", email)
+    const [email, setEmail] = useState(null);
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const storedEmail = localStorage.getItem("email");
+            setEmail(storedEmail);
+        }
+    }, []);
     const onsubmit = async (data) => {
 
         const res = await fetch(`${baseUrl}/api/user//otpmessage`, {
