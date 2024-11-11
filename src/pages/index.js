@@ -13,10 +13,6 @@ export default function Home() {
     }
   }, []);
 
-  if (token === null) {
-    return <p>Loading...</p>;
-  }
-
   return (
     <>
       {token ? <Dashboard /> : <Login />}
