@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 // import { SubmitHandler, useForm } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
-import Image from 'next/image';
+  
 import { baseUrl } from '@/config/constant';
 
 
@@ -55,7 +55,7 @@ const Register = () => {
     return (
         <div className='flex w-full md:flex-row flex-col items-center justify-center md:h-screen overflow-hidden'>
             <div className="flex justify-start items-start md:w-[50%]">
-                <Image src="/images/9.jpg" alt="" className='md:w-[80%] sm:[60%] w-[300px]' />
+                  <img src="/images/9.jpg" alt=""   className='md:w-[80%] sm:[60%] w-[300px]' />
             </div>
             <div className="flex gap-5 p-8 flex-col md:w-[50%]">
                 <h2 className="text-[#111111] font-[600] text-[25px]">Register</h2>

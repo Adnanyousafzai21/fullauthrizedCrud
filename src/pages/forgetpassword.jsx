@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { MdOutlineMailOutline } from 'react-icons/md'
-import Image from 'next/image';
+  
 import { baseUrl } from '@/config/constant';
 
 const ForgetPassword = () => {
@@ -28,7 +28,7 @@ const ForgetPassword = () => {
     return (
         <div className="flex justify-between items-center flex-col md:flex-row md:h-screen">
             <div className="md:w-[50%] flex items-start justify-center">
-                <Image src="/images/9.jpg" alt="" className='md:w-[80%] sm:w-[60%] w-[300px]' />
+                  <img src="/images/9.jpg" alt=""   className='md:w-[80%] sm:w-[60%] w-[300px]' />
             </div>
             <div className="md:w-[50%] flex items-start flex-col gap-y-10 justify-center">
 

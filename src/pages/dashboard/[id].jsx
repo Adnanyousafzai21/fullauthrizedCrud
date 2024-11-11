@@ -24,9 +24,7 @@ const Dashboard = () => {
         console.log("Updated temprivfile:", priveFile);
     }, [priveFile]);
 
-    useEffect(() => {
-        gettodbyid()
-    },[gettodbyid])
+
 
     const gettodbyid = async () => {
         const res = await fetch(`${baseUrl}/api/todo/getlltodos?id=${id}`,
@@ -37,10 +35,12 @@ const Dashboard = () => {
             console.log("resData in query ", resData.todo.file)
             setValue("subject", resData.todo.subject);
 
-            setValue("description", resData.todo.description);   
+            setValue("description", resData.todo.description);
         }
     }
-
+    useEffect(() => {
+        gettodbyid()
+    }, [])
     const onSubmit = async (formData) => {
         try {
             const res = await fetch(`${baseUrl}/api/todo/todocreate?id=${id}`, {
