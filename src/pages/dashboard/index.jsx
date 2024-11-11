@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { baseUrl } from '../../config/constant'
 import Uplaodfile from '@/components/uplaodfile'
+import Navbar from '@/components/navbar'
 
 
 const Dashboard = () => {
@@ -32,7 +33,7 @@ const Dashboard = () => {
         console.log("payload", payload)
     }
     return (
-        <>
+        <Navbar>
             <div className='w-full flex justify-center items-center'>
                 <div className="lg:w-[40%] md:w-[60%] w-[95%] m-auto mt-10 p-5 ">
                     <form onSubmit={handleSubmit(onSubmit)} className='w-full flex flex-col  gap-5 justify-center items-center'>
@@ -60,7 +61,7 @@ const Dashboard = () => {
                     </form>
                 </div>
             </div>
-        </>
+        </Navbar>
     )
 }
 
