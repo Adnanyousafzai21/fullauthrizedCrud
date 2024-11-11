@@ -17,8 +17,6 @@ const ActivityList = () => {
             const resdata = await res.json()
             console.log("resdat is here", resdata)
             setdata(resdata.alltodos)
-
-
         }
     }
 
