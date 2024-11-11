@@ -4,9 +4,9 @@ import Link from 'next/link'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { MdOutlineMailOutline } from 'react-icons/md'
-import { baseUrl } from '../../../config/constant'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import { baseUrl } from '@/config/constant'
 
 
 const Login = () => {
@@ -61,7 +61,7 @@ const Login = () => {
                         <input type="submit" value="Log In" className='cursor-pointer text-[20px] w-full h-full border-none outline-none font-[400] text-white bg-[#E4421B]' />
                     </div>
                     <div className=" gap-y-1">
-                        <p className='text-center text-[#333333] text-[15px]'>If you don't have  registerd, <Link className='text-[#E4421B]' href="/register"> Register</Link> </p>
+                        <p className='text-center text-[#333333] text-[15px]'> If you don&#39;t have registered, <Link className='text-[#E4421B]' href="/register"> Register</Link> </p>
                     </div>
                 </form>
             </div>

@@ -7,9 +7,9 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import { useRouter } from 'next/navigation';
 // import { SubmitHandler, useForm } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
-import { baseUrl } from '../../../config/constant';
 import Link from 'next/link';
 import Image from 'next/image';
+import { baseUrl } from '@/config/constant';
 
 
 const Register = () => {

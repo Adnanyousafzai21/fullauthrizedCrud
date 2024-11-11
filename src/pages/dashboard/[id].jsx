@@ -26,7 +26,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         gettodbyid()
-    }, [])
+    },[gettodbyid])
 
     const gettodbyid = async () => {
         const res = await fetch(`${baseUrl}/api/todo/getlltodos?id=${id}`,

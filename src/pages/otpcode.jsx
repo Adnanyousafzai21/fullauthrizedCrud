@@ -3,8 +3,8 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { MdOutlineMailOutline } from 'react-icons/md';
-import { baseUrl } from '../../../config/constant';
 import Image from 'next/image';
+import { baseUrl } from '@/config/constant';
 
 const OtpCode = () => {
     const Router = useRouter();
