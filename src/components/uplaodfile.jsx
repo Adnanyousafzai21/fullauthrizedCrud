@@ -5,6 +5,7 @@ import { BsEye } from 'react-icons/bs';
 import { IoCloudUploadOutline } from "react-icons/io5";
 import { MdOutlineDeleteOutline } from 'react-icons/md';
 import cloudinaryUpload from './cloudinary';
+import Image from 'next/image';
 
 
 const Uplaodfile = ({ previewUrl, setPriveFile }) => {
@@ -30,9 +31,9 @@ const Uplaodfile = ({ previewUrl, setPriveFile }) => {
             {previewUrl?.length > 0 && <div className="w-full flex flex-col gap-3  p-2 mb-1">
                 {
                     previewUrl?.map((item, index) => (
-                        <div className="flex gap justify-between items-center px-3 rounded-lg p-2 shadow-[1px_1px_5px_5px_rgba(150,150,150,0.1)] my-2 border-">
+                        <div className="flex gap justify-between items-center px-3 rounded-lg p-2 shadow-[1px_1px_5px_5px_rgba(150,150,150,0.1)] my-2 border-" key={index}>
                             <div className="group w-14 h-14 rounded-[10px] overflow-hidden relative flex justify-center items-center cursor-pointer">
-                                <img src={item?.previewUrl} alt="" className='w-full h-full rounded-[10px] absolute' />
+                                <Image src={item?.previewUrl} alt="" className='w-full h-full rounded-[10px] absolute' />
                                 <div className='hidden  w-full h-full  bg-primaryColor absolute opacity-50 group-hover:flex justify-center items-center'> </div>
                                 <BsEye className='text-[#000000] absolute z-30  hidden group-hover:block text-2xl font-[800]' />
                             </div>

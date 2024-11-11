@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form'
 import { MdOutlineMailOutline } from 'react-icons/md'
 import { baseUrl } from '../../../config/constant'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 
 const Login = () => {
@@ -36,7 +37,7 @@ const Login = () => {
     return (
         <div className=' flex flex-col md:flex-row justify-between items-center md:h-screen'>
             <div className="md:w-[50%] flex justify-start items-center h-full  ">
-                <img src="/images/9.jpg" alt="" className='md:w-[80%] sm:[60%] w-[300px]' />
+                <Image src="/images/9.jpg" alt="" className='md:w-[80%] sm:[60%] w-[300px]' />
             </div>
             <div className="md:w-[50%] flex flex-col gap-y-10 justify-start items-start">
                 <h2 className="text-[25px] font-[400] text-[#111111]">Log in</h2>

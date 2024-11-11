@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { BsEye } from 'react-icons/bs'
 import PoopOver from '@/components/PoopOver'
 import { baseUrl } from '@/config/constant'
+import Image from 'next/image'
 const ActivityList = () => {
 
     const [data, setdata] = useState([])
@@ -40,7 +41,7 @@ const ActivityList = () => {
                                         {item.file.map((filedata) => {
                                             { console.log("url priview", filedata.previewUrl) }
                                             return <div key={filedata?._id} className=" group flex justify-center items-center relative w-24 rounded-lg overflow-hidden h-24 border">
-                                                <img
+                                                <Image
                                                     src={filedata?.previewUrl}
                                                     alt=""
                                                     className='w-full h-full '
