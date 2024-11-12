@@ -1,19 +1,26 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { BsEye } from 'react-icons/bs';
 import { baseUrl } from '@/config/constant';
 import PoopOver from '@/components/Poopover';
 import Navbar from '@/components/navbar';
+import { themeContext } from '@/components/contextaPI';
 
 const ActivityList = () => {
+    const { theme } = useContext(themeContext)
+    const token = typeof window !== "undefined"? localStorage.getItem("token"):null
     const [data, setData] = useState([]);
 
     console.log("data", data);
 
     const getAllTodos = async () => {
         try {
-            const res = await fetch(`${baseUrl}/api/todo/getlltodos`);
+            const res = await fetch(`${baseUrl}/api/todo/getlltodos`,{
+                headers:{
+                    "Authorization":`Bearer ${token}`
+                }
+            });
             if (res.ok) {
                 const resData = await res.json();
                 console.log("Response data:", resData);
@@ -32,7 +39,7 @@ const ActivityList = () => {
 
     return (
         <Navbar>
-            <div className='w-full pt-10 flex justify-center items-center'>
+            <div className={` ${theme ? "text-textcolor1 bg-bgColor1 " : "text-textColor2 bg-bgColor2"} w-full pt-10 flex justify-center items-center`}>
                 <div className="lg:w-[50%] md:w-[60%] sm:w-[80%] w-[98%] p-2 sm:p-10 flex flex-col gap-3">
                     {data.length > 0 && data.map((item) => (
                         <div

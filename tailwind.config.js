@@ -11,7 +11,11 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primaryColor: "#FCEDE8",
-        secondrayColor: "#E4421B"
+        secondrayColor: "#E4421B",
+        bgColor1: "black",
+        textcolor1: "white",
+        bgColor2: "white",
+        textColor2: "black"
       },
     },
   },

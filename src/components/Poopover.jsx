@@ -9,7 +9,9 @@ const PoopOver = ({ getlltodos, item }) => {
     const deleteTodo = async (_id) => {
         const res = await fetch(`${baseUrl}/api/todo/deltetodos`, {
             method: "post",
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json",
+                "Authorization":`Bearer ${token}`
+             },
             body: JSON.stringify({ _id })
         })
         if (res.ok) {

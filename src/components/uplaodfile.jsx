@@ -47,7 +47,7 @@ const Uplaodfile = ({ previewUrl, setPriveFile }) => {
             </div>}
 
             <label htmlFor="uploadFile1"
-                className="relative     bg-primaryColor  font-semibold border-secondrayColor  rounded w-full h-32 flex flex-col items-center justify-center cursor-pointer border-2  border-dashed mx-auto p-4">
+                className="relative  text-textColor2   bg-primaryColor  font-semibold border-secondrayColor  rounded w-full h-32 flex flex-col items-center justify-center cursor-pointer border-2  border-dashed mx-auto p-4">
                 <IoCloudUploadOutline className='text-2xl' />
                 <h2 className='text-[16px]'>Upload file</h2>
                 <input type="file" id="uploadFile1" className="absolute h-full w-full z-0" style={{ visibility: "hidden" }} onChange={uplaodFile} />
