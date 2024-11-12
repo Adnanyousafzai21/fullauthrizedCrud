@@ -24,7 +24,7 @@ const Navbar = ({ children }) => {
     }, [token])
     return (
         <>
-            <div className={` ${theme?"text-textcolor1 bg-bgColor1 ":"text-textColor2 bg-bgColor2"} gap-y-2 w-full h-[80px] md:h-[60px] z-50 flex justify-center md:justify-between flex-col md:flex-row items-center overflow-hidden sticky top-0 shadow-[1px_1px_5px_2px_rgba(150,150,150,0.1)] px-5 py-2`}>
+            <div className={` ${theme?"text-textcolor1 bg-bgColor1 ":"text-textColor2 bg-bgColor2"} gap-y-2 w-full h-[80px] md:h-[60px] z-50 flex justify-center md:justify-between flex-col md:flex-row items-center overflow-hidden sticky top-0 ${theme?"shadow-[1px_1px_5px_2px_rgba(150,150,150,0.3)]":"shadow-[1px_1px_5px_2px_rgba(150,150,150,0.1)]"}  px-5 py-2`}>
                 <h2 className="md:text-[22px] text-[19px] font-[800] text-secondrayColor  ">
                     FullAthurizedCrud
                 </h2>

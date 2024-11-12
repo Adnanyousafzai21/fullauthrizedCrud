@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from 'next/navigation';
-import React, { useState } from 'react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
 import { MdOutlineMailOutline } from 'react-icons/md'
   
@@ -45,9 +45,7 @@ const ForgetPassword = () => {
                         <input type="submit" value="Send" className=' cursor-pointer text-[20px] w-full h-full border-none outline-none font-[400] text-white bg-[#E4421B]' />
                     </div>
                 </form>
-
             </div>
-
         </div>
     )
 }

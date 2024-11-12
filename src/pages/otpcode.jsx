@@ -1,4 +1,5 @@
 "use client";
+
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -13,7 +14,7 @@ const OtpCode = () => {
 
     const onsubmit = async (data) => {
 
-        const res = await fetch(`${baseUrl}/api/user//otpmessage`, {
+        const res = await fetch(`${baseUrl}/api/user/otpmessage`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ otpcode: data.otpcode, email: email })
