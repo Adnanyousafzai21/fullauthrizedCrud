@@ -40,10 +40,11 @@ const ActivityList = () => {
     return (
         <Navbar>
             <div className={` ${theme ? "text-textcolor1 bg-bgColor1 " : "text-textColor2 bg-bgColor2"} w-full pt-10 flex justify-center items-center`}>
-                <div className="lg:w-[50%] md:w-[60%] sm:w-[80%] w-[98%] p-2 sm:p-10 flex flex-col gap-3">
+                <div className="lg:w-[50%] md:w-[60%] sm:w-[80%]  w-[98%] p-2 sm:p-10 flex flex-col gap-3">
                     {data.length > 0 && data.map((item) => (
                         <div
-                            className="w-full flex relative flex-col rounded-lg gap-y-4 shadow-[1px_1px_5px_5px_rgba(150,150,150,0.1)] px-5 py-5"
+                            // className="w-full flex relative flex-col rounded-lg gap-y-4 shadow-[1px_1px_5px_5px_rgba(150,150,150,0.1)] px-5 py-5"
+                            className="w-full flex relative flex-col my-2 rounded-lg gap-y-4 shadow-[1px_1px_5px_5px_rgba(150,150,150,0.3)] px-5 py-5"
                             key={item._id}
                         >
                             <h2 className="text font text-[22px] leading-1">{item?.subject}</h2>

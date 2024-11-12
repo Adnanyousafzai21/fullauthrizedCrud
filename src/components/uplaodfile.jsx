@@ -28,12 +28,12 @@ const Uplaodfile = ({ previewUrl, setPriveFile }) => {
 
     return (
         <>
-            {previewUrl?.length > 0 && <div className="w-full flex flex-col gap-3  p-2 mb-1">
+            {previewUrl?.length > 0 && <div className="w-full flex flex-col gap-3   mb-2">
                 {
                     previewUrl?.map((item, index) => (
-                        <div className="flex gap justify-between items-center px-3 rounded-lg p-2 shadow-[1px_1px_5px_5px_rgba(150,150,150,0.1)] my-2 border-" key={index}>
-                            <div className="group w-14 h-14 rounded-[10px] overflow-hidden relative flex justify-center items-center cursor-pointer">
-                                  <img src={item?.previewUrl}   alt="" className='w-full h-full rounded-[10px] absolute' />
+                        <div className="flex text-textColor2 gap justify-between items-center  rounded-lg p-1  bg-primaryColor my-2 border-" key={index}>
+                            <div className="group w-16 h-16 rounded-lg overflow-hidden relative flex justify-center items-center cursor-pointer">
+                                  <img src={item?.previewUrl}   alt="" className='w-full h-full rounded-lg absolute' />
                                 <div className='hidden  w-full h-full  bg-primaryColor absolute opacity-50 group-hover:flex justify-center items-center'> </div>
                                 <BsEye className='text-[#000000] absolute z-30  hidden group-hover:block text-2xl font-[800]' />
                             </div>
