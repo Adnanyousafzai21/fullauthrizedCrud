@@ -37,7 +37,7 @@ const Navbar = ({ children }) => {
                     <button className="hover:text-secondrayColor" onClick={logout}>LogOut</button>
                 </div>
             </div>
-            <div className={`w-full min-h-[90.6vh] ${theme?"bg-bgColor1":"bg-bgColor2"}  `}>{children}</div>
+            <div className={`w-full min-h-[90.4vh] ${theme?"bg-bgColor1":"bg-bgColor2"}  `}>{children}</div>
         </>
     )
 }
