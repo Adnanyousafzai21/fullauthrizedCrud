@@ -22,7 +22,7 @@ const ForgetPassword = () => {
         if (res.ok) {
             const resData = res.json()
             console.log("res.message", resData)
-            Router.push("/otpCode")
+            Router.push("/otpcode")
         }
     }
     return (

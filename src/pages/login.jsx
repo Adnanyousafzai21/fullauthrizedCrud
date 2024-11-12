@@ -55,7 +55,7 @@ const Login = () => {
                         {errors.email && <span className="text-red-500">{errors.email.message}</span>}
                     </div>
                     <div className="flex flex-col gap-y-1">
-                        <Link href="/forgetPassword"><span className="text-[#E4421B]">Forget password</span></Link>
+                        <Link href="/forgetpassword"><span className="text-[#E4421B]">Forget password</span></Link>
                     </div>
                     <div className=" overflow-hidden  w-[300px] rounded-md  h-[40px] ">
                         <input type="submit" value="Log In" className='cursor-pointer text-[20px] w-full h-full border-none outline-none font-[400] text-white bg-[#E4421B]' />
